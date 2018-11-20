@@ -1,0 +1,18 @@
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+<div class="container container-fluid">
+  <div class="row">
+    <button type="button" class="btn btn-lg btn-primary" disabled><a [routerLink]="['/CricketMatch/frontpage']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="color:black">Cricket Match</a></button>
+  </div>
+  <div class="row">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+</div>
+
+
