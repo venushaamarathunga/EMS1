@@ -1,0 +1,70 @@
+<div class="container">
+  <br>
+    <h2>Team Form</h2>
+  <br>
+    <!--<form [formGroup]="eventForm" autocomplete="off" novalidate (ngSubmit)="createEvent(eventForm.value)">-->
+    <form>
+      <div class="form-group row">
+          <label for="inputEventId" class="col-2 col-form-label" >Event Id</label>
+          <div class="col-10">
+              <input formControlName="eventId" class="form-control" type="text" placeholder="event Id" id="inputEventId">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inputFormId" class="col-2 col-form-label" >Form Id</label>
+        <div class="col-10">
+            <input formControlName="formId" class="form-control" type="text" placeholder="Form Id" id="inputFormId">
+        </div>
+     </div>
+
+      <div class="form-group row">
+          <label for="inputTeamName" class="col-2 col-form-label" >Team Name :</label>
+          <div class="col-10">
+              <input formControlName="teamName" class="form-control" type="text" placeholder="Team Name" id="inputTeamName" >
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputTeamCaptainName" class="col-2 col-form-label">Captain Name : </label>
+          <div class="col-10">
+              <input formControlName="captainName" class="form-control" type="text" placeholder="Captain Name" id="inputTeamCaptainName">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inputTeamCaptainId" class="col-2 col-form-label">Captain Id : </label>
+        <div class="col-10">
+            <input formControlName="captainId" class="form-control" type="text" placeholder="Captain Id" id="inputTeamCaptainId">
+        </div>
+    </div>
+
+      <div class="form-group row">
+        <label for="inputCaptainContact" class="col-2 col-form-label">Captain Contact : </label>
+        <div class="col-10">
+            <input formControlName="captainContact" class="form-control" type="text" placeholder="Captain Contact" id="inputCaptainContact">
+        </div>
+      </div>      
+
+      <div class="form-group row">
+        <label for="inputCaptainEmail" class="col-2 col-form-label">Caption Email : </label>
+        <div class="col-10">
+            <input formControlName="captainContact" class="form-control" type="text" placeholder="Caption Email" id="inputCaptainEmail">
+        </div>
+      </div> 
+
+      <div class="form-group row">
+        <label for="inputTeamMember" class="col-2 col-form-label">Team Member : </label>
+        <div class="col-10">
+            <input formControlName="teamMember" class="form-control" type="text" placeholder="Team Member" id="inputTeamMember">
+        </div>
+      </div> 
+
+      <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            <input id="s-btn" class="btn btn-primary" type="submit" value="Submit">  
+          </div>
+      </div>
+
+    </form>
+</div>

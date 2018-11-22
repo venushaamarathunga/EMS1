@@ -1,7 +1,13 @@
+import { Time } from '@angular/common';
+
 export interface CricketMatch{
-    // id: string;
-    // name: string;
-    // dateOfBirth: Date;
-    // address: string;
-    // Add the match details
+    id: string;
+    mainTopic: string;
+    subTopic: string;
+    date: Date;
+    time: Time;
+    place: string;
+    rLastday: Date;
+    content1: string;
+    content2: string;
 }

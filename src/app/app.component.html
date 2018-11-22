@@ -1,18 +1,68 @@
-
+<!-- 
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <div class="container container-fluid">
+      <div class="row">
+          <router-outlet></router-outlet>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-lg btn-primary"><a [routerLink]="['/CricketMatch/frontpage']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="color:black">Cricket Match</a></button>
+      </div>
+    </div>
+</div> -->
 
-<div class="container container-fluid">
-  <div class="row">
-    <button type="button" class="btn btn-lg btn-primary" disabled><a [routerLink]="['/CricketMatch/frontpage']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="color:black">Cricket Match</a></button>
-  </div>
-  <div class="row">
-      <router-outlet></router-outlet>
-  </div>
+
+
+
+<div class="top">
+    <div class="titleBar">
+            <div class="row ">
+            <div class="col-2">
+                    <img src="" >
+            </div>
+            <div class="col-8">
+                    <h1 >{{title}}</h1>
+            </div>
+            <div class="col-2"></div>
+           </div> 
+            
+    </div>
+ 
+  <!-- <div *ngIf="logged; then thenBlock else elseBlock" ></div>
+    <ng-template #thenBlock>
+        <app-logged-header></app-logged-header>
+    </ng-template>
+    <ng-template #elseBlock>
+        <app-loging-header></app-loging-header>
+        
+    </ng-template> -->
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+                <button type="button" class="btn btn-lg btn-primary" *ngIf="show" (click)="clickone()"><a [routerLink]="['/CricketMatch/rcfrontpage']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="color:black">Cricket Match</a></button>
+        </div>
+        <div class="col-2"></div>    
+    </div>
+
+<div id="bottompage">
+    <div class="row ">
+            <!-- <div class="col-1 side"></div>-->        
+        <div class="col-12">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <div class="col-1 side"></div> -->
+    </div>
 </div>
 
-</div>
+
+
+   
+
+
+
+
 
 

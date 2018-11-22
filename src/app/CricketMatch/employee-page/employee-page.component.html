@@ -1,0 +1,50 @@
+<div class="container">
+  <br>
+    <h2>Employee Cicket Match Participation</h2>
+  <br>
+    <form [formGroup]="employeeForm" autocomplete="off" novalidate (ngSubmit)="employeeData(employeeForm.value)">
+
+      <div class="form-group row">
+          <label for="inputName" class="col-2 col-form-label" >Name :</label>
+          <div class="col-10">
+              <input formControlName="employeeName" class="form-control" type="text" placeholder="Name" id="inputName" >
+              <em *ngIf="validateControl('employeeName') && hasError('employeeName', 'required')">*Employee name is required</em>
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputId" class="col-2 col-form-label">Id No : </label>
+          <div class="col-10">
+              <input formControlName="employeeId" class="form-control" type="text" placeholder="Id No" id="inputId">
+              <em *ngIf="validateControl('employeeId') && hasError('employeeId', 'required')">*Employee Id is required</em>
+          </div>
+      </div>
+
+      <div class ="row">
+          <div class="form-group col-md-4 " >
+            <label class="gender">If you Participation :</label>
+          </div>
+          <div class="form-group col-md-1 ">
+                  <label class="gender">Yes :</label>
+          </div>
+          <div class="form-group col-md-2 ">	 
+              <input type="radio" name="employeeParticipate" value="true" formControlName="employeeParticipate" >
+          </div>
+          <div class="form-group col-md-2 ">
+                  <label class="gender">No :</label>
+          </div>
+          <div class="form-group col-md-1 ">
+              <input type="radio"  name="employeeParticipate" value="false" formControlName="employeeParticipate"  >
+          </div>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-danger" (click)="redirectToOwnerList()">Cancel</button>
+          <button type="submit" class="btn btn-success" [disabled]="!employeeForm.valid">Submit</button>
+      </div> 
+
+    </form>
+</div>
+
+
+

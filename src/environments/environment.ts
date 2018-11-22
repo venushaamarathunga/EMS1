@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAddress: 'http://localhost:4200/cricketmatch'
+  urlAddress: 'http://localhost:4200/api/cricketmatch'
 };
 
 /*

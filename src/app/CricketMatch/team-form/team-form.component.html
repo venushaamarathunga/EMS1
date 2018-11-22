@@ -1,0 +1,62 @@
+<div class="container">
+  <br>
+    <h2>Team Form</h2>
+  <br>
+  <form [formGroup]="teamForm" autocomplete="off" novalidate (ngSubmit)="teamData(teamForm.value)">
+
+      <div class="form-group row">
+          <label for="inputTeamName" class="col-2 col-form-label" >Team Name :</label>
+          <div class="col-10">
+              <input formControlName="teamName" class="form-control" type="text" placeholder="Team Name" id="inputTeamName" >
+              <em *ngIf="validateControl('teamName') && hasError('teamName', 'required')">*Employee Id is required</em>
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputTeamCaptainName" class="col-2 col-form-label">Captain Name : </label>
+          <div class="col-10">
+              <input formControlName="teamCaptainName" class="form-control" type="text" placeholder="Captain Name" id="inputTeamCaptainName">
+              <em *ngIf="validateControl('teamCaptainName') && hasError('teamCaptainName', 'required')">*Employee Id is required</em>
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inputTeamCaptainId" class="col-2 col-form-label">Captain Id : </label>
+        <div class="col-10">
+            <input formControlName="teamCaptainId" class="form-control" type="text" placeholder="Captain Id" id="inputTeamCaptainId">
+            <em *ngIf="validateControl('teamCaptainId') && hasError('teamCaptainId', 'required')">*Employee Id is required</em>
+        </div>
+      </div>
+
+       <div class="form-group row">
+        <label for="inputCaptainContact" class="col-2 col-form-label">Captain Contact : </label>
+        <div class="col-10">
+            <input formControlName="teamCaptainContact" class="form-control" type="text" placeholder="Captain Contact" id="inputCaptainContact">
+            <em *ngIf="validateControl('teamCaptainContact') && hasError('teamCaptainContact', 'required')">*Employee Id is required</em>
+        </div>
+      </div>      
+
+      <div class="form-group row">
+        <label for="inputCaptainEmail" class="col-2 col-form-label">Caption Email : </label>
+        <div class="col-10">
+            <input formControlName="teamCaptainEmail" class="form-control" type="text" placeholder="Caption Email" id="inputCaptainEmail">
+            <em *ngIf="validateControl('teamCaptainEmail') && hasError('teamCaptainEmail', 'required')">*Employee Id is required</em>
+        </div>
+      </div> 
+
+      <div class="form-group row">
+        <label for="inputTeamMember" class="col-2 col-form-label">Team Member : </label>
+        <div class="col-10">
+            <textarea class="form-control" class="form-control" id="inputTeamMember" formControlName="teamMember"placeholder="Team Member" rows="6">
+                <em *ngIf="validateControl('teamMember') && hasError('teamMember', 'required')">*Employee Id is required</em>
+            </textarea>
+        </div>
+      </div>
+<br>
+      <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger" (click)="redirectToOwnerList()">Cancel</button>
+            <button type="submit" class="btn btn-success" [disabled]="!teamForm.valid">Submit</button>
+      </div>
+
+    </form>
+</div>

@@ -4,7 +4,7 @@
       <h1 id="main-topic">{{result.mainTopic}}</h1>
   </div>
   <!-- <div class="col-2">
-      <button id="btn-update" type="button" class="btn btn-success"><a [routerLink]="['/rc-cricket-frontpage']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Update</a></button>
+      <button id="btn-update" type="button" class="btn btn-success"><a [routerLink]="['/rc-front-page']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Update</a></button>
   </div> -->
   <div class="col-1"></div>
 </div>
@@ -26,13 +26,33 @@
   </div>
 
   <div class="row no-gutters">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <p style="color:brown">
+            {{result.rLastday}}
+        </p>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="row no-gutters">
       <div class="col-1"></div>
       <div class="col-10">
           <article>
-              {{result.contant}}
+              {{result.content1}}
           </article>
       </div>
       <div class="col-1"></div>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <article>
+            {{result.content2}}
+        </article>
+    </div>
+    <div class="col-1"></div>
   </div>
   
 <br>
@@ -52,3 +72,6 @@
       <div class="col-1"></div>
   </div>
    
+
+
+ 

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EMS';
+  title = 'Event Management Syatem';
+  show = true;
+  clickone(){
+      this.show = !this.show;
+  }
 }
